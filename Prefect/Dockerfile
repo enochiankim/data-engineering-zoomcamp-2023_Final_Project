@@ -4,6 +4,6 @@ COPY docker-requirements.txt .
 
 RUN pip install -r docker-requirements.txt --trusted-host pypi.python.org --no-cache-dir
 
-COPY flows/03_deployments /opt/prefect/flows/
+COPY flows/etl_process /opt/prefect/flows/
 
 RUN mkdir -p /opt/prefect/data/yellow
