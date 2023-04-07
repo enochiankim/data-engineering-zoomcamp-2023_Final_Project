@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: faang_stock_data
+    description: This dataset (Orginally obtained from Kaggle) was extracted from Google Big Query. It contains FAANG company stock data from Jan 2013 to July 2020. The main goal to analyze stock data within the timeframe mentioned. 
+    columns:
+      - name: Date
+        description: This field contains the date which the stock performed that day. 
+
+      - name: Open
+        description: This field contains the price of the stock at the beginning of the trading market day. 
+
+      - name: High
+        description: This field contains the highest price of the stock during the trading market day. 
+
+      - name: Low
+        description: This field contains the lowest price of the stock during the trading market day. 
+          
+      - name: Close
+        description: This field contains the price of the stock at the end of the trading market day. 
+
+      - name: Adj_Close
+        description: This field contains the adjusted price of the stock at the end of the trading market day. 
+          
+      - name: Volume
+        description: This field contain the number of volumes that were traded during the trading market day. 
+
+      - name: file_name
+        description: This field contains the company's name
+
+    tests:
+      - relationships:
+          to: ref('faang_stock_symbol')
+          field: Company
+

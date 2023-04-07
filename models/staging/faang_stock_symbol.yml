@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: faang_stock_symbol
+    description: This table has the company name and the stock ticker symbol
+    columns:
+      - name: company
+        tests:
+          - unique
+          - not_null
+
+      - name: Company
+        description: A unique identifier for a faang company. This field contains the company's offical name.
+
+      - name: Stock_Symbol
+        description: A unique identifier for a faang company. This field contains a the company's stock symbol also known as the ticker symbol. Usually consist of a 1 or more letters. 
+
+    tests:
+      - relationships:
+          to: ref('faang_stock_data')
+          field: Company
