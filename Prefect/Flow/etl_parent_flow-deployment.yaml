@@ -1,0 +1,47 @@
+###
+### A complete description of a Prefect Deployment for flow 'etl-parent-flow'
+###
+name: 'Stock Process ETL '
+description: Orchestrate ETL process for multiple companies
+version: 4fbd2d29b8edd5185ff72de79d93dcbe
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: default-agent-pool
+tags: []
+parameters: {}
+schedule: null
+is_schedule_active: true
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: etl-parent-flow
+manifest_path: null
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  _block_document_id: 395af14e-260d-4087-ac94-32e255db0c5b
+  _block_document_name: anonymous-e644953b-a3b9-4f9a-87c9-f7d14406f018
+  _is_anonymous: true
+  block_type_slug: process
+  _block_type_slug: process
+storage: null
+path: C:\Users\Enkim\Desktop\Git\data-engineering-zoomcamp\data-engineering-zoomcamp-2023_Final_Project\Prefect\Flow
+entrypoint: etl_process.py:etl_parent_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    companies:
+      title: companies
+      position: 0
+  required:
+  - companies
+  definitions: null
+timestamp: '2023-04-08T19:08:24.410783+00:00'
