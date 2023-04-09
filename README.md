@@ -79,6 +79,10 @@ This project architecture is setup to do the following:
 
 Below are the results of the dashboard.
 
+<p align="left">
+  <img width="700" height="400" src="[https://github.com/enochiankim/data-engineering-zoomcamp-2023_Final_Project/blob/main/images/Project_Architecture.PNG](https://github.com/enochiankim/data-engineering-zoomcamp-2023_Final_Project/blob/main/images/FAANG%20Overall.PNG)">
+</p>
+
 [Average Overall](https://github.com/enochiankim/data-engineering-zoomcamp-2023_Final_Project/blob/main/images/FAANG%20Overall.PNG)
 [Highest Percentage Increase](https://github.com/enochiankim/data-engineering-zoomcamp-2023_Final_Project/blob/main/images/FAANG_Bar.PNG)
 [Average Volume](https://github.com/enochiankim/data-engineering-zoomcamp-2023_Final_Project/blob/main/images/FAANG_Line.PNG)
