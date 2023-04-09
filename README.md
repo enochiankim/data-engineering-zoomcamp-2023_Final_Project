@@ -37,7 +37,7 @@ The FAANG stock data contains the following information:
 
 The goals for this project to answer the following questions.
 
-* What was the overall average trend of FAANG stocks during this period?
+* What was the overall trend of FAANG stocks during this period?
 * What was the average daily trading volume of FAANG stocks during this period?
 * Which FAANG company had the highest percentage increase in stock price during this period?
 
@@ -79,21 +79,29 @@ This project architecture is setup to do the following:
 
 Below are the results of the dashboard.
 
-Average FAANG stock data overall
+FAANG stock data overall
 <p align="left">
   <img width="800" height="700" src="https://github.com/enochiankim/data-engineering-zoomcamp-2023_Final_Project/blob/main/images/FAANG%20Overall.PNG">
 </p>
 
-Highest Percentage Increase
+Average Volume
 <p align="left">
   <img width="800" height="700" src="https://github.com/enochiankim/data-engineering-zoomcamp-2023_Final_Project/blob/main/images/FAANG_Bar.PNG">
 </p>
 
 
-Average Volume
+Highest Percentage Increase
 <p align="left">
   <img width="800" height="700" src="https://github.com/enochiankim/data-engineering-zoomcamp-2023_Final_Project/blob/main/images/FAANG_Line.PNG">
 </p>
+
+Findings from the results:
+
+* Apple has the highest average volume overall.
+* Amazon and Google have similar highest percentage increase.
+* Nexflix and Apple have the lowest recorded price however Netflix has much less volume than Apple.
+* Amazon has the highest recorded price and has second least amount of volume.
+* Facebook has the third most volume and the low and high are also the third most.
 
 ## Reproducing this Project
 
