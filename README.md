@@ -31,7 +31,7 @@ The FAANG stock data contains the following information:
 
 ## Problem/Questions
 
-The goal for this project to answer the following questions.
+The goals for this project to answer the following questions.
 
 * What was the overall trend of FAANG stocks during this period?
 * What was the average daily trading volume of FAANG stocks during this period?
@@ -43,3 +43,12 @@ I needed to find a way to combine the dataset together to order to run an analys
 
 ## Technologies 
 
+The technologies that were used in order to achieve the goal for this project are:
+
+* Cloud: [Google Cloud](https://cloud.google.com)
+* Data lake: [Google Cloud Storage](https://cloud.google.com/storage)
+* Data warehouse: [BigQuery](https://cloud.google.com/bigquery)
+* Data transformation: [DBT](https://www.getdbt.com/)
+* Infrastructure: [Terraform](https://www.terraform.io/)
+* Orchestration: [Prefect](https://www.prefect.io/)
+* Data visualization: [Google Looker Studio](https://cloud.google.com/looker)
