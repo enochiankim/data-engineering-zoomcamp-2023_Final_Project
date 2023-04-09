@@ -56,6 +56,6 @@ The technologies that were used in order to achieve the goal for this project ar
 ## Project Architecture
 
 <p align="center">
-  <img width="400" height="400" src="https://github.com/enochiankim/data-engineering-zoomcamp-2023_Final_Project/blob/main/images/Project_Architecture.PNG">
+  <img width="600" height="400" src="https://github.com/enochiankim/data-engineering-zoomcamp-2023_Final_Project/blob/main/images/Project_Architecture.PNG">
 </p>
 
