@@ -62,7 +62,7 @@ The technologies that were used in order to achieve the goal for this project ar
 
 This project architecture is setup to do the following:
 
-1. A scripted called etl_process.py
+1. A scripted called `etl_process.py`
 
 ## Results
 
