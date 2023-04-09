@@ -60,5 +60,11 @@ The technologies that were used in order to achieve the goal for this project ar
   <img width="700" height="400" src="https://github.com/enochiankim/data-engineering-zoomcamp-2023_Final_Project/blob/main/images/Project_Architecture.PNG">
 </p>
 
+This project architecture is setup to do the following:
 
+1. A scripted called etl_process.py
+
+## Results
+
+## Reproducing this Project
 
