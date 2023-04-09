@@ -20,6 +20,8 @@ FAANG is an acronym that refers to a group of five major technology companies: F
 
 The [dataset](https://www.kaggle.com/datasets/aayushmishra1512/faang-complete-stock-data) was taken from the Kaggle. Kaggle is an online community and platform for data scientists and machine learning practitioners to participate in data science competitions, collaborate on projects, and access datasets and machine learning resources.
 
+I have also created a small dataset which refers the companies to there stock_symbols.
+
 The FAANG stock data contains the following information:
 1. Date: refers to the date on which a particular transaction related to that stock took place.
 2. Open: Opening Price of the stock.
@@ -28,6 +30,8 @@ The FAANG stock data contains the following information:
 5. Close: Closing price of stock of the day. 
 6. Adj Close: Data is adjusted using appropriate split and dividend multipliers for the closing price for the day.
 7. Volume: Volume are the physical number of shares traded of that stock on a particular day.
+8. Company: Name was the FAANG company
+9. Stock_Symbol: The name of the ticker symbol of the company. 
 
 ## Problem/Questions
 
@@ -65,7 +69,7 @@ This project architecture is setup to do the following:
 1. A script called `etl_process.py` will first take retrieve raw stock data from the github page and be placed into a csv file and converted in a parquet file. 
 2. Once the files are converted into a parquet file, a new column will be added to be specify the name of the company and the files will be placed into a Google Cloud Storage bucket (data lake).
 4. Once the files are loaded into the bucket, they will be taken from the bucket and moved into Bigquery (data warehouse) where the files will be inserted into tables for dbt use. 
-5. 
+5. For the dbt process, since we have 6 different tables, the dbt model will combine the tables according the correct columns in order to form a brand new table which will be used for visualzations. 
 
 ## Results
 
