@@ -12,10 +12,10 @@ def transform(path: Path):
     return df
 
 @task()
-def write_bq(df: pd.DataFrame, company: str) -> None:
+def write_bq(df: pd.DataFrame, company: str):
     """Write DataFrame to BigQuery"""
     gcp_credentials_block = GcpCredentials.load("zoomcamp-gcs-credentials")
-    project_id = "Your Project Id"
+    project_id = "prefect-de-zoomcamp-376500"
     destination_table = f"{project_id}.stock_data_table.{company}"
     df.to_gbq(
         destination_table=destination_table,
@@ -33,16 +33,17 @@ def etl_gcs_to_bq(company, gcs_path):
 
 
 @task(retries=3)
-def fetch(dataset_url: str) -> pd.DataFrame:
+def fetch(dataset_url: str):
     """Download CSV file from URL and return DataFrame"""
     df = pd.read_csv(dataset_url)
     return df
 
 @task()
-def write_local(df: pd.DataFrame, dataset_file: str) -> Path:
+def write_local(df: pd.DataFrame, dataset_file: str):
     """Write DataFrame to local Parquet file and return file path"""
     df = df.assign(file_name=dataset_file)
-    path = Path(f"C:/Users/Enkim/Desktop/Data-Engineering-ZoomCamp-2023/Final_Project/{dataset_file}.parquet")
+    Path(f"Stock_data").mkdir(parents=True, exist_ok=True)
+    path = Path(f"Stock_data/{dataset_file}.parquet")
     df.to_parquet(path, compression="gzip")
     return path
 
@@ -56,7 +57,7 @@ def write_gcs(path: Path):
 def etl_web_to_gcs(company: str):
     """Flow to download CSV file from web URL, write to local Parquet file, and upload to GCS bucket"""
     dataset_file = f"{company}"
-    dataset_url = f"https://raw.githubusercontent.com/enochiankim/-data-engineering-zoomcamp-2023/main/Final_Project/Stock_Data/Company/{dataset_file}.csv"
+    dataset_url = f"https://raw.githubusercontent.com/enochiankim/data-engineering-zoomcamp-2023_Final_Project/main/Stock_Data/Company/{dataset_file}.csv"
     df = fetch(dataset_url)
     path = write_local(df, dataset_file)
     write_gcs(path)
