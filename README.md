@@ -52,3 +52,7 @@ The technologies that were used in order to achieve the goal for this project ar
 * Infrastructure: [Terraform](https://www.terraform.io/)
 * Orchestration: [Prefect](https://www.prefect.io/)
 * Data visualization: [Google Looker Studio](https://cloud.google.com/looker)
+
+## Project Architecture
+
+
