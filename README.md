@@ -18,4 +18,13 @@ FAANG is an acronym that refers to a group of five major technology companies: F
 
 ## About the Dataset.
 
-The [dataset](https://www.kaggle.com/datasets/aayushmishra1512/faang-complete-stock-data) was taken from the Kaggle. Kaggle is an online community and platform for data scientists and machine learning practitioners to participate in data science competitions, collaborate on projects, and access datasets and machine learning resources. 
+The [dataset](https://www.kaggle.com/datasets/aayushmishra1512/faang-complete-stock-data) was taken from the Kaggle. Kaggle is an online community and platform for data scientists and machine learning practitioners to participate in data science competitions, collaborate on projects, and access datasets and machine learning resources.
+
+The FAANG stock data contains the following information:
+1. Date: refers to the date on which a particular transaction related to that stock took place.
+2. Open: Opening Price of the stock.
+3. High: Max Price of the stock of the day.
+4. Low: Min Price of the stock of the day.
+5. Close: Closing price of stock of the day. 
+6. Adj Close: Data is adjusted using appropriate split and dividend multipliers for the closing price for the day.
+7. Volume: Volume are the physical number of shares traded of that stock on a particular day.
