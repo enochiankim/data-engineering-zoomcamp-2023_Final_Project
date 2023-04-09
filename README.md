@@ -37,7 +37,7 @@ The FAANG stock data contains the following information:
 
 The goals for this project to answer the following questions.
 
-* What was the overall trend of FAANG stocks during this period?
+* What was the overall average trend of FAANG stocks during this period?
 * What was the average daily trading volume of FAANG stocks during this period?
 * Which FAANG company had the highest percentage increase in stock price during this period?
 
