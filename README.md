@@ -79,18 +79,20 @@ This project architecture is setup to do the following:
 
 Below are the results of the dashboard.
 
+The dashboard link can be found [here.](https://lookerstudio.google.com/u/0/reporting/c53de9ae-0f9d-49a1-8810-2251b7d209cf/page/qVmLD)
+
 FAANG stock data overall
 <p align="left">
   <img width="800" height="700" src="https://github.com/enochiankim/data-engineering-zoomcamp-2023_Final_Project/blob/main/images/FAANG%20Overall.PNG">
 </p>
 
-Average Volume
+FAANG Average Volume
 <p align="left">
   <img width="800" height="700" src="https://github.com/enochiankim/data-engineering-zoomcamp-2023_Final_Project/blob/main/images/FAANG_Bar.PNG">
 </p>
 
 
-Highest Percentage Increase
+FAANG Highest Percentage Increase
 <p align="left">
   <img width="800" height="700" src="https://github.com/enochiankim/data-engineering-zoomcamp-2023_Final_Project/blob/main/images/FAANG_Line.PNG">
 </p>
