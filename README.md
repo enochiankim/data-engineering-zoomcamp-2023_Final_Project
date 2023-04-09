@@ -37,6 +37,9 @@ The goal for this project to answer the following questions.
 * What was the average daily trading volume of FAANG stocks during this period?
 * Which FAANG company had the highest percentage increase in stock price during this period?
 
-The problem that I had was that, the dataset were separated between the 5 companies. 
+Some of the problems that I was faced with the project was that, the dataset was separated between the 5 companies.
+While trying to achieve the goals of the project. (mentioned in the overview section)
 I needed to find a way to combine the dataset together to order to run an analysis on the data and answer the questions. 
+
+## Technologies 
 
