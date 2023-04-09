@@ -80,7 +80,7 @@ This project architecture is setup to do the following:
 Below are the results of the dashboard.
 
 <p align="left">
-  <img width="700" height="700" src="https://github.com/enochiankim/data-engineering-zoomcamp-2023_Final_Project/blob/main/images/FAANG%20Overall.PNG">
+  <img width="800" height="700" src="https://github.com/enochiankim/data-engineering-zoomcamp-2023_Final_Project/blob/main/images/FAANG%20Overall.PNG">
 </p>
 
 [Average Overall](https://github.com/enochiankim/data-engineering-zoomcamp-2023_Final_Project/blob/main/images/FAANG%20Overall.PNG)
