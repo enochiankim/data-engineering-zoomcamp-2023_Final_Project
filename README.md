@@ -29,10 +29,14 @@ The FAANG stock data contains the following information:
 6. Adj Close: Data is adjusted using appropriate split and dividend multipliers for the closing price for the day.
 7. Volume: Volume are the physical number of shares traded of that stock on a particular day.
 
-## Questions to be answered and Problems to be resolved.
+## Problem/Questions
+
+The goal for this project to answer the following questions.
 
 * What was the overall trend of FAANG stocks during this period?
 * What was the average daily trading volume of FAANG stocks during this period?
 * Which FAANG company had the highest percentage increase in stock price during this period?
 
+The problem that I had was that, the dataset were separated between the 5 companies. 
+I needed to find a way to combine the dataset together to order to run an analysis on the data and answer the questions. 
 
