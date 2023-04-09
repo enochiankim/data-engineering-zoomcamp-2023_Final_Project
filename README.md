@@ -62,7 +62,10 @@ The technologies that were used in order to achieve the goal for this project ar
 
 This project architecture is setup to do the following:
 
-1. A scripted called `etl_process.py`
+1. A script called `etl_process.py` will first take retrieve raw stock data from the github page and be placed into a csv file and converted in a parquet file. 
+2. Once the files are converted into a parquet file, a new column will be added to be specify the name of the company and the files will be placed into a Google Cloud Storage bucket (data lake).
+4. Once the files are loaded into the bucket, they will be taken from the bucket and moved into Bigquery (data warehouse) where the files will be inserted into tables for dbt use. 
+5. 
 
 ## Results
 
