@@ -10,3 +10,7 @@ In order to achieve the overall goal:
 3. Create a pipeline to move the dataset from the datalake into a data warehouse.
 4. Transform the data in the data warehouse and prepare it for dashboard use.
 5. Create a dashboard. 
+
+## What are FAANG Stocks?
+
+FAANG is an acronym that refers to a group of five major technology companies: Facebook (now Meta), Amazon, Apple, Netflix, and Google (now Alphabet). These companies are known for being some of the largest and most successful technology companies in the world. They have a significant impact on the stock market and the global economy as a whole, and their stocks are often in high demand among investors.
