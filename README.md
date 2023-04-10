@@ -117,7 +117,7 @@ pip install -r requirements.txt
 - Make sure to download the JSON credentials and save it
 - Install the [Google Cloud SDK](https://cloud.google.com/sdk/docs/install-sdk)
 - Let the [environment variable point to your GCP key](https://cloud.google.com/docs/authentication/application-default-credentials#GAC), authenticate it and refresh the session token.
-3. Setup Terraform infrastructure:
+3. Setup Terraform Infrastructure:
 -If you do not have Terraform, first install it [link](https://developer.hashicorp.com/terraform/downloads) and add it to your PATH.
 -After you have downloaded and installed it, run the following commands:
 ```bash
@@ -126,20 +126,38 @@ terraform init
 terraform plan -var="project=<your-gcp-project-id>"
 terraform apply -var="project=<your-gcp-project-id>"
 ```
-4.  
-5. 
+4. Setup Prefect Orchestration:
+- Once the required python packages have been installed, install prefect.
+- In order to setup prefect, run the following command and access this UI http://127.0.0.1:4200/:
+```bash
+prefect orion start
+```
+- Make sure to register your GCS bucket and BigQuery credentials on top of that, the Docker Box too.
+- Also make sure that the names of the block match within these files `etl_process.py` and the block section of the repo.
+- Next step, you will store the data in both the bucket and Big Query running the following in the command line:
+```bash
+cd flows/
+python etl_process.py
+```
+- If you want to run this in docker, run the following commands:
+```bash
+cd Prefect/
+docker image build -t <docker-username>/stock:zoom .
+docker image push <docker-username>/stock:zoom
+```
+- Then deploy the docker by running this command:
+```bash
+cd flows/
+python docker_deploy.py
+```
+- Run this command afterwards:
+```bash
+prefect agent start
+```
+- Then this contained flow from the command line:
+```bash
+prefect deployment run etl-parent-flow/docker_stock_flow --param "companies=[Amazon,Apple,Facebook,Google,Neflix]"
+```
+5. After running all of these commands, you should have the data uploaded in both Google Cloud Storage and BigQuery, check and verify that the data is there. 
 6. 
 7. 
-8. 
-9. 
-10. 
-11. 
-12. 
-13. 
-14. 
-15. 
-16. 
-17. 
-
-
-
