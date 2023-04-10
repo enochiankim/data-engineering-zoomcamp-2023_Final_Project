@@ -1,0 +1,44 @@
+CREATE OR REPLACE TABLE `prefect-de-zoomcamp-376500.stock_data_table.faang_stock_data` AS
+SELECT Date, Open, High, Low, Close, Adj_Close, Volume, file_name AS `Company_Name`
+FROM `stock_data_table.Amazon`
+UNION ALL
+SELECT Date, Open, High, Low, Close, Adj_Close, Volume, file_name AS `Company_Name`
+FROM `stock_data_table.Apple`
+UNION ALL
+SELECT Date, Open, High, Low, Close, Adj_Close, Volume, file_name AS `Company_Name`
+FROM `stock_data_table.Facebook`
+UNION ALL
+SELECT Date, Open, High, Low, Close, Adj_Close, Volume, file_name AS `Company_Name`
+FROM `stock_data_table.Netflix` 
+UNION ALL
+SELECT Date, Open, High, Low, Close, Adj_Close, Volume, file_name AS `Company_Name`
+FROM `stock_data_table.Google`;
+
+CREATE OR REPLACE TABLE `prefect-de-zoomcamp-376500.stock_data_table.faang_stock_data_partitioned` 
+(
+  Date date,
+  Open FLOAT64,
+  High FLOAT64,
+  Low FLOAT64,
+  Close FLOAT64,
+  Adj_Close FLOAT64,
+  Volume INTEGER,
+  file_name STRING
+)
+PARTITION BY Date 
+CLUSTER BY file_name
+AS
+SELECT PARSE_DATE('%Y-%m-%d', Date) AS Date, Open, High, Low, Close, Adj_Close, Volume, file_name AS `Company_Name`
+FROM `stock_data_table.Amazon`
+UNION ALL
+SELECT PARSE_DATE('%Y-%m-%d', Date) AS Date, Open, High, Low, Close, Adj_Close, Volume, file_name AS `Company_Name`
+FROM `stock_data_table.Apple`
+UNION ALL
+SELECT PARSE_DATE('%Y-%m-%d', Date) AS Date, Open, High, Low, Close, Adj_Close, Volume, file_name AS `Company_Name`
+FROM `stock_data_table.Facebook`
+UNION ALL
+SELECT PARSE_DATE('%Y-%m-%d', Date) AS Date, Open, High, Low, Close, Adj_Close, Volume, file_name AS `Company_Name`
+FROM `stock_data_table.Netflix` 
+UNION ALL
+SELECT PARSE_DATE('%Y-%m-%d', Date) AS Date, Open, High, Low, Close, Adj_Close, Volume, file_name AS `Company_Name`
+FROM `stock_data_table.Google`;

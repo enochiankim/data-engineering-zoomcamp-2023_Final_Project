@@ -15,7 +15,7 @@ def transform(path: Path):
 def write_bq(df: pd.DataFrame, company: str):
     """Write DataFrame to BigQuery"""
     gcp_credentials_block = GcpCredentials.load("zoomcamp-gcs-credentials")
-    project_id = "prefect-de-zoomcamp-376500"
+    project_id = "Your Project Id"
     destination_table = f"{project_id}.stock_data_table.{company}"
     df.to_gbq(
         destination_table=destination_table,

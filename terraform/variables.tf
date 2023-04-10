@@ -3,7 +3,7 @@ locals {
 }
 
 variable "project" {
-  description = "prefect-de-zoomcamp-376500"
+  description = "Your Project Id"
 }
 
 variable "region" {
