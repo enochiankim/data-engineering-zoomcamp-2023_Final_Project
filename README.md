@@ -119,6 +119,11 @@ pip install -r requirements.txt
 - Make sure to download the JSON credentials and save it
 - Install the [Google Cloud SDK](https://cloud.google.com/sdk/docs/install-sdk)
 - Let the [environment variable point to your GCP key](https://cloud.google.com/docs/authentication/application-default-credentials#GAC), authenticate it and refresh the session token.
+```bash
+export GOOGLE_APPLICATION_CREDENTIALS=<path_to_your_credentials>.json
+gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
+gcloud auth application-default login
+```
 3. Setup Terraform Infrastructure:
 -If you do not have Terraform, first install it [link](https://developer.hashicorp.com/terraform/downloads) and add it to your PATH.
 -After you have downloaded and installed it, run the following commands:
