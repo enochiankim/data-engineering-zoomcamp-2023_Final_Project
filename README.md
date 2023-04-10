@@ -132,9 +132,9 @@ terraform apply -var="project=<your-gcp-project-id>"
 ```bash
 prefect orion start
 ```
-- Make sure to register your GCS bucket and BigQuery credentials on top of that, the Docker Box too.
+- Make sure to register your Google Cloud Storage Bucket and BigQuery credentials on top of that, the Docker Box too.
 - Also make sure that the names of the block match within these files `etl_process.py` and the block section of the repo.
-- Next step, you will store the data in both the bucket and Big Query running the following in the command line:
+- Next step, you will store the data in both the both Google Cloud Storage Bucket and BigQuery running the following in the command line:
 ```bash
 cd flows/
 python etl_process.py
@@ -159,5 +159,13 @@ prefect agent start
 prefect deployment run etl-parent-flow/docker_stock_flow --param "companies=[Amazon,Apple,Facebook,Google,Neflix]"
 ```
 5. After running all of these commands, you should have the data uploaded in both Google Cloud Storage and BigQuery, check and verify that the data is there. 
-6. 
-7. 
+6. Setup dbt:
+- In order to run the dbt flow, you need to create a dbt account, you can create one [here](https://cloud.getdbt.com/)
+- Once dbt is setup, login setup the project, clone the repo again and go to develop. 
+- Once you are in develop, check the bottom right and you should see a Ready sign.
+- If you see that sign run the following command:
+```bash
+dbt run
+```
+- This dbt process will create the final dataset called final_faang_stock_data. This dataset will be used to create the data visualization on Google Looker Studio
+7. Next go to [Google Looker Studio](https://cloud.google.com/looker) and you can create the visualization needed for this project. 
