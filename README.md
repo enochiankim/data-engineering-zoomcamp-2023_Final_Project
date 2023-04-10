@@ -107,3 +107,27 @@ Findings from the results:
 
 ## Reproducing this Project
 
+1. Clone this repo then install the packages that is needed for this project.
+```bash
+pip install -r requirements.txt
+```
+2. Setup Google Cloud Environment. 
+-
+3. 
+4.  
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. 
+14. 
+15. 
+16. 
+17. 
+
+
+
