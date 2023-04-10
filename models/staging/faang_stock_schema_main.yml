@@ -4,7 +4,7 @@ sources:
   - name: faang_stock_data
     description: This dataset (Orginally obtained from Kaggle) was extracted from Google Big Query. It contains FAANG company stock data from Jan 2013 to July 2020. The main goal to analyze stock data within the timeframe mentioned. 
     
-    database: prefect-de-zoomcamp-376500
+    database: "Your Database"
    
     schema: stock_data_table
     
