@@ -159,6 +159,7 @@ prefect agent start
 prefect deployment run etl-parent-flow/docker_stock_flow --param "companies=[Amazon,Apple,Facebook,Google,Neflix]"
 ```
 5. After running all of these commands, you should have the data uploaded in both Google Cloud Storage and BigQuery, check and verify that the data is there. 
+
 6. Setup dbt:
 - In order to run the dbt flow, you need to create a dbt account, you can create one [here](https://cloud.getdbt.com/)
 - Once dbt is setup, login setup the project, clone the repo again and go to develop. 
