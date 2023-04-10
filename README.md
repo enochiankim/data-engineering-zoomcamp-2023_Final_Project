@@ -171,3 +171,4 @@ dbt run
 ```
 - This dbt process will create the final dataset called final_faang_stock_data. This dataset will be used to create the data visualization on Google Looker Studio
 7. Next go to [Google Looker Studio](https://cloud.google.com/looker) and you can create the visualization needed for this project. 
+
