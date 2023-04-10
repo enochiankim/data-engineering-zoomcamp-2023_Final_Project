@@ -120,10 +120,12 @@ pip install -r requirements.txt
 3. Setup Terraform infrastructure:
 -If you do not have Terraform, first install it [link](https://developer.hashicorp.com/terraform/downloads) and add it to your PATH.
 -After you have downloaded and installed it, run the following commands:
-`cd terraform`
-`terraform init`
-`terraform plan -var="project=<your-gcp-project-id>"`
-`terraform apply -var="project=<your-gcp-project-id>"`
+```bash
+cd terraform/
+terraform init
+terraform plan -var="project=<your-gcp-project-id>"
+terraform apply -var="project=<your-gcp-project-id>"
+```
 4.  
 5. 
 6. 
