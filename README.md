@@ -69,6 +69,7 @@ This project architecture is setup to do the following:
 * This process will repeat six times for the six tables.
 * A script called `etl_process.py` will first take retrieve raw stock data from the github page and be placed into a csv file and converted in a parquet file. 
 * Once the files are converted into a parquet file, a new column will be added to be specify the name of the company and the files will be placed into a Google Cloud Storage bucket (data lake).
+* I ran two SQL commands to merge the tables together and to partition accordingly (commands are in the flows section).
 * Once the files are loaded into the bucket, they will be taken from the bucket and moved into Bigquery (data warehouse) where the files will be inserted into tables for dbt use. 
 * For the dbt process, since we have 6 different tables, the dbt model will combine the tables according the correct columns in order to form a brand new table which will be used for visualizations.
 * Once the dbt process is completed, the visualizations can now be created on Google Looker Studio. 
