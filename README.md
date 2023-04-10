@@ -111,13 +111,19 @@ Findings from the results:
 ```bash
 pip install -r requirements.txt
 ```
-2. Setup Google Cloud Environment. 
+2. Setup Google Cloud Environment: 
 - Create a [Google Cloud Platform project](https://console.cloud.google.com/cloud-resource-manager)
 - Configure Identity and Access Management (IAM) for the service account, giving it the following privileges: BigQuery Admin, Storage Admin and Storage Object Admin
 - Make sure to download the JSON credentials and save it
 - Install the [Google Cloud SDK](https://cloud.google.com/sdk/docs/install-sdk)
 - Let the [environment variable point to your GCP key](https://cloud.google.com/docs/authentication/application-default-credentials#GAC), authenticate it and refresh the session token.
-3. 
+3. Setup Terraform infrastructure:
+-If you do not have Terraform, first install it [link](https://developer.hashicorp.com/terraform/downloads) and add it to your PATH.
+-After you have downloaded and installed it, run the following commands:
+`cd terraform`
+`terraform init`
+`terraform plan -var="project=<your-gcp-project-id>"`
+`terraform apply -var="project=<your-gcp-project-id>"`
 4.  
 5. 
 6. 
