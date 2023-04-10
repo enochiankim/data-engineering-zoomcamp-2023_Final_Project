@@ -31,7 +31,7 @@ The FAANG stock data contains the following information:
 5. Close: Closing price of stock of the day. 
 6. Adj Close: Data is adjusted using appropriate split and dividend multipliers for the closing price for the day.
 7. Volume: Volume are the physical number of shares traded of that stock on a particular day.
-8. Company: Name was the FAANG company
+8. Company: Name of the FAANG company
 9. Stock_Symbol: The name of the ticker symbol of the company. 
 
 ## Problem/Questions
